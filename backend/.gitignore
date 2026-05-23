@@ -1,0 +1,17 @@
+# --- EXISTS NOW — must ignore -----------------------------
+node_modules/
+.env
+
+# --- Will be created when server runs ---------------------
+logs/
+*.log
+npm-debug.log*
+
+# --- Will be created if you backup database ---------------
+backup/
+*.dump
+*.bson
+
+# --- Temp files -------------------------------------------
+*.tmp
+.cache/

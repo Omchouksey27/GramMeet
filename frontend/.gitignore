@@ -1,0 +1,21 @@
+# --- EXISTS NOW � must ignore -----------------------------
+node_modules/
+
+# --- Environment files ------------------------------------
+.env
+.env.local
+.env.production
+.env.development
+
+# --- Build output (created by npm run build) --------------
+dist/
+build/
+
+# --- Logs and cache ---------------------------------------
+*.log
+npm-debug.log*
+.cache/
+
+# --- Temp -------------------------------------------------
+*.tmp
+*.temp

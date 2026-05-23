@@ -1,0 +1,15 @@
+{
+  "dashboard": "Dashboard", "meetings": "Meetings", "members": "Members",
+  "attendance": "Attendance", "reports": "Reports", "analytics": "Analytics",
+  "notifications": "Notifications", "upcoming": "Upcoming", "past": "Past",
+  "schedule_meeting": "Schedule Meeting", "add_member": "Add Member",
+  "mark_attendance": "Mark Attendance", "download_report": "Download Report",
+  "defaulters": "Absence Defaulters", "logout": "Logout", "login": "Login",
+  "name": "Name", "email": "Email", "mobile": "Mobile", "ward_area": "Ward Area",
+  "role": "Role", "date": "Date", "venue": "Venue", "topic": "Topic",
+  "present": "Present", "absent": "Absent", "overall_attendance": "Overall Attendance",
+  "my_attendance": "My Attendance", "total_meetings": "Total Meetings",
+  "save": "Save", "cancel": "Cancel", "edit": "Edit", "delete": "Delete",
+  "search": "Search", "filter": "Filter", "year": "Year", "month": "Month",
+  "conclusion": "Conclusion", "actions_taken": "Actions Taken","password":"Password"
+}
