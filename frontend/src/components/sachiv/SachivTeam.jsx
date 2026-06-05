@@ -206,7 +206,7 @@ export default function SachivTeam() {
           <div className="bg-[#2C2E3A] h-full flex items-center justify-center p-8">
 
             <img
-              src="https://media.licdn.com/dms/image/v2/D4D03AQH2SZisOZ8EoA/profile-displayphoto-shrink_800_800/B4DZU9Cyv.HkAc-/0/1740485900333?e=1781136000&v=beta&t=WKhA6bJUqZ6JwwXgWiPBOfkK7U9oao7gd9QBzb-SN-E"
+              src="https://media.licdn.com/dms/image/v2/D4D03AQEKOtPQ8BV0JA/profile-displayphoto-crop_800_800/B4DZ6G2b16KUAM-/0/1780378882358?e=1782345600&v=beta&t=5v9vzoXztNhs_uImEGW36ZrfoqN7ImhmtLgidkHwBYE"
               alt="Om Chouksey"
               className="w-60 h-60 object-cover rounded-3xl shadow-2xl border-4 border-white/10"
             />

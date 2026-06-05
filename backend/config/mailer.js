@@ -1,38 +1,36 @@
-// const nodemailer = require('nodemailer');
-
-// const transporter = nodemailer.createTransport({
-//   host: process.env.EMAIL_HOST,
-//   port: process.env.EMAIL_PORT,
-//   auth: {
-//     user: process.env.EMAIL_USER,
-//     pass: process.env.EMAIL_PASS,
-//   },
-// });
-
-// module.exports = transporter;
-
 const nodemailer = require('nodemailer');
 
+const emailUser = process.env.EMAIL_USER;
+const emailPass = process.env.EMAIL_PASS;
+const emailHost = process.env.EMAIL_HOST || 'smtp-relay.brevo.com';
+const emailPort = parseInt(process.env.EMAIL_PORT) || 587;
+
+console.log('=== EMAIL CONFIG ===');
+console.log('HOST:', emailHost);
+console.log('PORT:', emailPort);
+console.log('USER:', emailUser || 'NOT SET');
+console.log('PASS:', emailPass ? 'SET (' + emailPass.length + ' chars)' : 'NOT SET');
+console.log('===================');
+
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
+  host: emailHost,
+  port: emailPort,
   secure: false,
   auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS,
+    user: emailUser,
+    pass: emailPass,
   },
   tls: {
     rejectUnauthorized: false,
   },
 });
 
-// Test connection on startup
 transporter.verify((error, success) => {
   if (error) {
-    console.error('❌ Email connection failed:', error.message);
-    console.error('Check EMAIL_USER and EMAIL_PASS in .env');
+    console.error('Email connection failed:', error.message);
+    console.error('Check EMAIL_USER and EMAIL_PASS in environment');
   } else {
-    console.log('✅ Email server connected and ready');
+    console.log('Email server ready to send');
   }
 });
 
