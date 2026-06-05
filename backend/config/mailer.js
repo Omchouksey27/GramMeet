@@ -22,15 +22,23 @@ const transporter = nodemailer.createTransport({
   },
   tls: {
     rejectUnauthorized: false,
+    ciphers: 'SSLv3',
   },
+  connectionTimeout: 10000,
+  greetingTimeout: 10000,
+  socketTimeout: 10000,
 });
 
 transporter.verify((error, success) => {
   if (error) {
-    console.error('Email connection failed:', error.message);
-    console.error('Check EMAIL_USER and EMAIL_PASS in environment');
+    console.error('=== EMAIL VERIFY FAILED ===');
+    console.error('Error code:', error.code);
+    console.error('Error message:', error.message);
+    console.error('===========================');
   } else {
-    console.log('Email server ready to send');
+    console.log('=== EMAIL SERVER READY ===');
+    console.log('Emails will be sent successfully');
+    console.log('==========================');
   }
 });
 
