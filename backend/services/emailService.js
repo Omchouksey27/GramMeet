@@ -32,7 +32,7 @@ const sendMeetingNotification = async (user, meeting) => {
   const subject = 'GramMeet: New Meeting Scheduled - ' + meeting.title;
 
   const html = 
-    <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden">
+    `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;border:1px solid #e5e7eb;border-radius:12px;overflow:hidden">
       <div style="background:#166534;padding:24px 32px">
         <h1 style="color:#ffffff;margin:0;font-size:22px">GramMeet</h1>
         <p style="color:#bbf7d0;margin:4px 0 0;font-size:13px">Gram Panchayat Meeting System</p>
@@ -71,7 +71,7 @@ const sendMeetingNotification = async (user, meeting) => {
       <div style="background:#f9fafb;padding:16px 32px;border-top:1px solid #e5e7eb;text-align:center">
         <p style="margin:0;color:#9ca3af;font-size:12px">GramMeet - Digitizing Gram Panchayat Meetings for a Better India</p>
       </div>
-    </div>
+    </div>`
   ;
 
   await sendEmail(user.email, user.name, subject, html);
@@ -121,7 +121,7 @@ const sendReminder = async (user, meeting, type) => {
         </table>
         
         <p style="color:#6b7280;font-size:13px;margin-top:24px">
-          Regards,<br>
+          Regards,<br/>
           <strong style="color:#166534">GramMeet System</strong>
         </p>
       </div>
